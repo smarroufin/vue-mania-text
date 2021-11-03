@@ -83,7 +83,7 @@ export default function () {
         // seek matching `$`
         let substring = text.substring(i)
         let handled = false
-        for (const command of Object.values(commands)) {
+        for (const command of Object.values<any>(commands)) {
           if (command.regex && command.regex.test(substring)) {
             handled = true
             if (command.style) {
