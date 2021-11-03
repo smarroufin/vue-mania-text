@@ -30,9 +30,15 @@ const commands = {
   },
   w: {
     // Wide spacing
+    regex: new RegExp(/^\$w.*/i),
+    style: (style, input) => ({ ...style, 'letter-spacing': '0.2rem' }),
+    length: 2
   },
   n: {
     // Narrow spacing
+    regex: new RegExp(/^\$n.*/i),
+    style: (style, input) => ({ ...style, 'letter-spacing': '-0.1rem' }),
+    length: 2
   },
   t: {
     // Capitals

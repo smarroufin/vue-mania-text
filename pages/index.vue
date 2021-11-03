@@ -13,11 +13,11 @@
 <script setup>
 const layout = 'default'
 
-const value = ref('$F00Te$ixt$gMa$00fn$oia$$.$zapp')
+const value = ref('$F00Te$ixt$gMa$00fn$oia')
 
 const preconfigs = [
   {
-    name: 'Colored text',
+    name: 'Colors',
     value: '$00FJean$FFFPie$F00rre'
   }, {
     name: 'Bold',
@@ -32,11 +32,8 @@ const preconfigs = [
     name: '$ Character',
     value: '$$Jean-Pierre$$'
   }, {
-    name: 'Wide spacing',
-    value: 'TODO'
-  }, {
-    name: 'Narrow spacing',
-    value: 'TODO'
+    name: 'Spacing',
+    value: 'Normal$wWide$nNarrow'
   }, {
     name: 'Reset all',
     value: '$oBold$iItalic$zDefault'
