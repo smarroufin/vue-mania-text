@@ -3,7 +3,12 @@
     <AppTextInterpreter :value="value" />
     <AppTextInput :value="value" @input="value = $event.target.value" class="my-6" />
     <div v-if="preconfigs.length" class="flex flex-wrap justify-center gap-2">
-      <button v-for="preconfig of preconfigs" :key="preconfig.name" @click="value = preconfig.value" class="button-default">
+      <button
+        v-for="preconfig of preconfigs"
+        :key="preconfig.name"
+        @click="value = preconfig.value"
+        class="button-default"
+      >
         {{ preconfig.name }}
       </button>
     </div>

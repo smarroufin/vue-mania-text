@@ -1,7 +1,7 @@
 const commands = {
   color: {
     regex: new RegExp(/^\$[0-9a-f]{3}.*/i),
-    style: (style, input) => ({ ...style, color: `#${input.substring(1, 4)}`}),
+    style: (style, input) => ({ ...style, color: `#${input.substring(1, 4)}` }),
     length: 4
   },
   z: {
@@ -13,19 +13,19 @@ const commands = {
   g: {
     // Reset color
     regex: new RegExp(/^\$g.*/i),
-    style: (style, input) => ({ ...style, color: `inherit`}),
+    style: (style, input) => ({ ...style, color: 'inherit' }),
     length: 2
   },
   o: {
     // Bold
     regex: new RegExp(/^\$o.*/i),
-    style: (style, input) => ({ ...style, 'font-weight': `700`}),
+    style: (style, input) => ({ ...style, 'font-weight': '700' }),
     length: 2
   },
   i: {
     // Italic
     regex: new RegExp(/^\$i.*/i),
-    style: (style, input) => ({ ...style, 'font-style': `italic`}),
+    style: (style, input) => ({ ...style, 'font-style': 'italic' }),
     length: 2
   },
   w: {
@@ -43,7 +43,7 @@ const commands = {
   t: {
     // Capitals
     regex: new RegExp(/^\$t.*/i),
-    style: (style, input) => ({ ...style, 'text-transform': `uppercase`}),
+    style: (style, input) => ({ ...style, 'text-transform': 'uppercase' }),
     length: 2
   },
   s: {

@@ -9,9 +9,9 @@ const html = ref('')
 
 const props = defineProps({
   value: {
-      type: String,
-      default: null
-    }
+    type: String,
+    default: null
+  }
 })
 
 watch(
