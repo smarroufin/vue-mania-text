@@ -1,49 +1,49 @@
 const commands = {
   color: {
     regex: new RegExp(/^\$[0-9a-f]{3}.*/i),
-    style: (style, input) => ({ ...style, color: `#${input.substring(1, 4)}` }),
+    style: (style: object, input: string) => ({ ...style, color: `#${input.substring(1, 4)}` }),
     length: 4
   },
   z: {
     // Reset all
     regex: new RegExp(/^\$z.*/i),
-    style: (style, input) => ({}),
+    style: (style: object, input: string) => ({}),
     length: 2
   },
   g: {
     // Reset color
     regex: new RegExp(/^\$g.*/i),
-    style: (style, input) => ({ ...style, color: 'inherit' }),
+    style: (style: object, input: string) => ({ ...style, color: 'inherit' }),
     length: 2
   },
   o: {
     // Bold
     regex: new RegExp(/^\$o.*/i),
-    style: (style, input) => ({ ...style, 'font-weight': '700' }),
+    style: (style: object, input: string) => ({ ...style, 'font-weight': '700' }),
     length: 2
   },
   i: {
     // Italic
     regex: new RegExp(/^\$i.*/i),
-    style: (style, input) => ({ ...style, 'font-style': 'italic' }),
+    style: (style: object, input: string) => ({ ...style, 'font-style': 'italic' }),
     length: 2
   },
   w: {
     // Wide spacing
     regex: new RegExp(/^\$w.*/i),
-    style: (style, input) => ({ ...style, 'letter-spacing': '0.2rem' }),
+    style: (style: object, input: string) => ({ ...style, 'letter-spacing': '0.2rem' }),
     length: 2
   },
   n: {
     // Narrow spacing
     regex: new RegExp(/^\$n.*/i),
-    style: (style, input) => ({ ...style, 'letter-spacing': '-0.1rem' }),
+    style: (style: object, input: string) => ({ ...style, 'letter-spacing': '-0.1rem' }),
     length: 2
   },
   t: {
     // Capitals
     regex: new RegExp(/^\$t.*/i),
-    style: (style, input) => ({ ...style, 'text-transform': 'uppercase' }),
+    style: (style: object, input: string) => ({ ...style, 'text-transform': 'uppercase' }),
     length: 2
   },
   s: {
@@ -63,15 +63,15 @@ const commands = {
   },
 }
 
-function createSpan (content, style) {
+function createSpan (content: string, style: object) {
   return `<span style="${Object.entries(style).map(([key, value]) => `${key}: ${value};`).join('')}">${content}</span>`
 }
 
 export default function () {
-  function format (text) {
-    let html = ''
-    let content = ''
-    let style = {}
+  function format (text: string) {
+    let html: string = ''
+    let content: string = ''
+    let style: object = {}
     for (let i = 0; i < text.length;) {
       // `$` handling
       if (text[i] === '$') {
@@ -81,8 +81,8 @@ export default function () {
           content = ''
         }
         // seek matching `$`
-        let substring = text.substring(i)
-        let handled = false
+        let substring: string = text.substring(i)
+        let handled: boolean = false
         for (const command of Object.values<any>(commands)) {
           if (command.regex && command.regex.test(substring)) {
             handled = true

@@ -1,11 +1,13 @@
 <template>
-  <div v-html="html" class="text"></div>
+  <div v-html="html" class="control-default text-center p-4 text-3xl w-full min-h-18"></div>
 </template>
 
-<script setup>
+<script setup lang="ts">
+import { Ref, ref, watch } from 'vue'
+
 const { format } = useManiaSyntax()
 
-const html = ref('')
+const html: Ref<string> = ref('')
 
 const props = defineProps({
   value: {
@@ -20,9 +22,3 @@ watch(
   { immediate: true }
 )
 </script>
-
-<style scoped>
-.text {
-  @apply control-default text-center p-4 text-3xl w-full min-h-18;
-}
-</style>

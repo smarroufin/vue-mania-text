@@ -19,8 +19,10 @@
   </div>
 </template>
 
-<script setup>
-const value = ref('$F00Te$ixt$gMa$00fn$oia')
+<script setup lang="ts">
+import { Ref, ref } from 'vue'
+
+const value: Ref<string> = ref('$F00Te$ixt$gMa$00fn$oia')
 
 const preconfigs = [
   {
