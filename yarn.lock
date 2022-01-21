@@ -3691,7 +3691,7 @@ number-is-nan@^1.0.0:
   optionalDependencies:
     fsevents "~2.3.2"
 
-nuxt-windicss@^2.0.8:
+nuxt-windicss@2.0.8:
   version "2.0.8"
   resolved "https://registry.yarnpkg.com/nuxt-windicss/-/nuxt-windicss-2.0.8.tgz#608a8ebe39cef54d3b2f220e6551ce1d0f0d3245"
   integrity sha512-lgrjx4Ksb+4bRDtq+LhhEaae87RLKoOodW83FGtQkahVSl0oILqHinkBWpNPANHKTQomC5Mxsp25AX55Epg4hw==
@@ -3709,7 +3709,7 @@ nuxt-windicss@^2.0.8:
     windicss-analysis "^0.3.4"
     windicss-webpack-plugin "^1.5.3"
 
-nuxt3@^3.0.0-27255478.7ede9b1:
+nuxt3@3.0.0-27255478.7ede9b1:
   version "3.0.0-27255478.7ede9b1"
   resolved "https://registry.yarnpkg.com/nuxt3/-/nuxt3-3.0.0-27255478.7ede9b1.tgz#4b615a740018f2b18d04c2e8a77d261789c11a57"
   integrity sha512-1jnfXJ0EzNlxNrGpwgB8vHnWUEB/unSyXUh2tegh+zIzBFGqt2EU2BtipW51+XWdSjftdyXuh281yGSEPrldPA==
