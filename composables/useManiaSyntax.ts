@@ -1,4 +1,11 @@
-const commands = {
+const commands: {
+  [key: string]: {
+    regex: RegExp,
+    style?: (style: object, input: string) => any,
+    content?: () => string,
+    length: number
+  }
+} = {
   color: {
     regex: new RegExp(/^\$[0-9a-f]{3}.*/i),
     style: (style: object, input: string) => ({ ...style, color: `#${input.substring(1, 4)}` }),
@@ -57,6 +64,8 @@ const commands = {
     // Internal link / ManiaLink
     regex: new RegExp(/^\$h.*/i),
     // TODO
+    style: (style: object, input: string) => (style),
+    length: 2
   },
   l: {
     // External link
@@ -93,7 +102,7 @@ export default function () {
         // seek matching `$`
         let substring: string = text.substring(i)
         let handled: boolean = false
-        for (const command of Object.values<any>(commands)) {
+        for (const command of Object.values(commands)) {
           if (command.regex && command.regex.test(substring)) {
             handled = true
             if (command.style) {

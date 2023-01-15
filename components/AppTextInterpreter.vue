@@ -3,11 +3,9 @@
 </template>
 
 <script setup lang="ts">
-import { Ref, ref, watch } from 'vue'
-
 const { format } = useManiaSyntax()
 
-const html: Ref<string> = ref('')
+const html = ref<string>('')
 
 const props = defineProps({
   value: {

@@ -2,9 +2,9 @@
   <div class="bg-primary min-h-screen relative">
     <header class="bg-primary border-b border-white p-4 text-3xl text-white sticky top-0">TextMania</header>
 
-    <div class="content flex flex-col">
+    <div class="w-full max-w-screen-sm px-2 py-6 mx-auto flex flex-col">
       <AppTextInterpreter :value="value" />
-      <AppTextInput :value="value" @input="value = $event.target.value" class="my-6" />
+      <AppTextInput v-model="value" class="my-6" />
       <div v-if="preconfigs.length" class="flex flex-wrap justify-center gap-2">
         <button
           v-for="preconfig of preconfigs"
@@ -20,9 +20,7 @@
 </template>
 
 <script setup lang="ts">
-import { Ref, ref } from 'vue'
-
-const value: Ref<string> = ref('$F00Te$ixt$gMa$00fn$oia')
+const value = ref('$F00Te$ixt$gMa$00fn$oia')
 
 const preconfigs = [
   {
@@ -63,3 +61,12 @@ const preconfigs = [
   },
 ]
 </script>
+
+<style>
+.control-default {
+  @apply border-2 border-white rounded-tl-xl rounded-br-xl bg-primary-dark text-white;
+}
+.button-default {
+  @apply control-default px-2 py-1 text-xl;
+}
+</style>
