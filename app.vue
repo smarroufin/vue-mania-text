@@ -42,6 +42,10 @@ const preconfigs = [
     value: 'lowercase$tuppercase',
   },
   {
+    name: 'Shadow',
+    value: '$sShadowed text',
+  },
+  {
     name: '$ Character',
     value: '$$Jean-Pierre$$',
   },

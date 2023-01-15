@@ -31,13 +31,13 @@ const commands = {
   w: {
     // Wide spacing
     regex: new RegExp(/^\$w.*/i),
-    style: (style: object, input: string) => ({ ...style, 'letter-spacing': '0.2rem' }),
+    style: (style: object, input: string) => ({ ...style, 'letter-spacing': '0.2em' }),
     length: 2
   },
   n: {
     // Narrow spacing
     regex: new RegExp(/^\$n.*/i),
-    style: (style: object, input: string) => ({ ...style, 'letter-spacing': '-0.1rem' }),
+    style: (style: object, input: string) => ({ ...style, 'letter-spacing': '-0.1em' }),
     length: 2
   },
   t: {
@@ -48,12 +48,22 @@ const commands = {
   },
   s: {
     // Shadowed
+    regex: new RegExp(/^\$s.*/i),
+    // TODO
+    style: (style: object, input: string) => ({ ...style, 'text-shadow': '0.0625em 0.0625em 0.0625em rgb(0 0 0 / 50%)' }),
+    length: 2
   },
   h: {
     // Internal link / ManiaLink
+    regex: new RegExp(/^\$h.*/i),
+    // TODO
   },
   l: {
     // External link
+    regex: new RegExp(/^\$l.*/i),
+    // TODO
+    style: (style: object, input: string) => (style),
+    length: 2
   },
   $: {
     // `$` character
