@@ -16,9 +16,9 @@
     "dev": "vite",
     "build": "vite build && vue-tsc --emitDeclarationOnly",
     "preview": "vite preview",
-    "docs:dev": "(cd docs && nuxi dev)",
-    "docs:build": "(cd docs && nuxi build)",
-    "docs:preview": "(cd docs && nuxi preview)"
+    "docs:dev": "(cd docs && yarn nuxt dev)",
+    "docs:build": "(cd docs && yarn nuxt build)",
+    "docs:preview": "(cd docs && yarn nuxt preview)"
   },
   "devDependencies": {
     "@types/node": "^18.11.18",
