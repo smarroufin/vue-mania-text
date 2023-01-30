@@ -1,6 +1,8 @@
 {
-  "name": "mania-text",
+  "name": "@smarroufin/mania-text",
+  "description": "",
   "version": "0.0.1",
+  "author": "Sylvain Marroufin <marroufin.sylvain@gmail.com>",
   "license": "MIT",
   "type": "module",
   "files": ["dist"],
