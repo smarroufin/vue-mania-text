@@ -1,4 +1,5 @@
 .DS_Store
-dist/
+.nuxt
+.output
 node_modules/
 *.log

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "devDependencies": {
+    "@nuxtjs/tailwindcss": "^6.3.0",
+    "nuxt": "3.1.1"
+  }
+}

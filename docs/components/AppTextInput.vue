@@ -1,7 +1,3 @@
-<template>
-  <input v-model="modelValue" type="text" class="control-default text-center p-4 text-3xl w-full" />
-</template>
-
 <script setup lang="ts">
 const props = defineProps({
   modelValue: {
@@ -21,3 +17,7 @@ const modelValue = computed({
   }
 })
 </script>
+
+<template>
+  <input v-model="modelValue" type="text" class="control-default text-center p-4 text-3xl w-full" />
+</template>

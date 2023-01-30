@@ -1,13 +1,33 @@
 {
-  "name": "text-mania",
-  "private": true,
+  "name": "mania-text",
+  "version": "0.0.1",
+  "license": "MIT",
+  "type": "module",
+  "files": ["dist"],
+  "main": "./dist/index.umd.cjs",
+  "module": "./dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.umd.cjs"
+    }
+  },
   "scripts": {
-    "dev": "nuxi dev",
-    "build": "nuxi build",
-    "start": "nuxi preview"
+    "dev": "vite",
+    "build": "vite build && vue-tsc --emitDeclarationOnly",
+    "preview": "vite preview",
+    "docs:dev": "(cd docs && nuxi dev)",
+    "docs:build": "(cd docs && nuxi build)",
+    "docs:preview": "(cd docs && nuxi preview)"
   },
   "devDependencies": {
-    "@nuxtjs/tailwindcss": "^6.2.0",
-    "nuxt": "3.0.0"
+    "@types/node": "^18.11.18",
+    "@vitejs/plugin-vue": "^4.0.0",
+    "typescript": "^4.9.4",
+    "vite": "^4.0.4",
+    "vue-tsc": "^1.0.24"
+  },
+  "dependencies": {
+    "vue": "^3.2.45"
   }
 }
