@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { computed } from 'vue'
 import useManiaSyntax from '../composables/useManiaSyntax'
 
 const { format } = useManiaSyntax()
