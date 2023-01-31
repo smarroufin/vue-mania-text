@@ -20,9 +20,7 @@
     "docs:dev": "(cd docs && yarn nuxt dev)",
     "docs:build": "(cd docs && yarn nuxt build)",
     "docs:generate": "(cd docs && yarn nuxt generate)",
-    "docs:preview": "(cd docs && yarn nuxt preview)",
-    "postinstall": "(cd docs && yarn install)",
-    "prepublishOnly": "yarn build"
+    "docs:preview": "(cd docs && yarn nuxt preview)"
   },
   "devDependencies": {
     "@types/node": "^18.11.18",
