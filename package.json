@@ -15,13 +15,13 @@
     }
   },
   "scripts": {
-    "dev": "vite",
     "build": "vite build && vue-tsc --emitDeclarationOnly",
-    "preview": "vite preview",
     "docs:dev": "(cd docs && yarn nuxt dev)",
     "docs:build": "(cd docs && yarn nuxt build)",
     "docs:generate": "(cd docs && yarn nuxt generate)",
-    "docs:preview": "(cd docs && yarn nuxt preview)"
+    "docs:preview": "(cd docs && yarn nuxt preview)",
+    "postinstall": "(cd docs && yarn install)",
+    "prepublishOnly": "yarn build"
   },
   "devDependencies": {
     "@types/node": "^18.11.18",
