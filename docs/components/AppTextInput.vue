@@ -19,5 +19,5 @@ const modelValue = computed({
 </script>
 
 <template>
-  <input v-model="modelValue" type="text" class="control-default text-center p-4 text-3xl w-full" />
+  <input v-model="modelValue" type="text" class="control-default text-center p-4 text-3xl w-full" aria-label="mania text input" />
 </template>
