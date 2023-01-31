@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import useManiaSyntax from '../composables/useManiaSyntax'
+import useManiaText from '../composables/useManiaText'
 
-const { format } = useManiaSyntax()
+const { format } = useManiaText()
 
 const props = defineProps({
   value: {
