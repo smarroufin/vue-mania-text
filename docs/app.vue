@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import { ManiaText } from '../dist'
 
-const value = ref('$F00Te$ixt$gMa$00fn$oia')
+const value = ref('$00fVue$g$oMania$z$f00$iText')
 
 const preconfigs = [
   {
     name: 'Colors',
-    value: '$00FJean$FFFPie$F00rre',
+    value: '$00fJean$fffPie$f00rre',
   },
   {
     name: 'Bold',
@@ -38,17 +38,17 @@ const preconfigs = [
   },
   {
     name: 'Reset color',
-    value: '$F00Red$gDefault',
+    value: '$f00Red$gDefault',
   },
 ]
 </script>
 
 <template>
-  <div class="bg-primary min-h-screen relative">
-    <header class="bg-primary border-b border-white p-4 text-3xl text-white sticky top-0">ManiaText</header>
+  <div class="bg-primary text-white min-h-screen relative">
+    <header class="bg-primary border-b border-white p-4 text-3xl sticky top-0">VueManiaText</header>
 
-    <div class="w-full max-w-screen-sm px-2 py-6 mx-auto flex flex-col">
-      <ManiaText :value="value" class="text-white control-default text-center p-4 text-3xl w-full min-h-18" />
+    <div class="w-full max-w-screen-sm px-4 py-16 mx-auto flex flex-col">
+      <ManiaText :value="value" class="control-default text-center p-4 text-3xl w-full min-h-18" />
       <AppTextInput v-model="value" class="my-6" />
       <div v-if="preconfigs.length" class="flex flex-wrap justify-center gap-2">
         <button
@@ -60,6 +60,12 @@ const preconfigs = [
           {{ preconfig.name }}
         </button>
       </div>
+
+      <span class="mt-16 text-lg text-center">
+        For development purpose, please visit
+        <NuxtLink href="https://www.npmjs.com/package/vue-mania-text" target="_blank" class="underline">VueManiaText</NuxtLink>
+        on npmjs.org.
+      </span>
     </div>
   </div>
 </template>
@@ -67,6 +73,7 @@ const preconfigs = [
 <style>
 .control-default {
   @apply border-2 border-white rounded-tl-xl rounded-br-xl bg-primary-dark text-white;
+  transform: skew(-8deg);
 }
 .button-default {
   @apply control-default px-2 py-1 text-xl;
