@@ -1,8 +1,10 @@
 export default defineNuxtConfig({
+  srcDir: 'app',
   app: {
     head: {
       htmlAttrs: {
-        lang: 'en'
+        lang: 'en',
+        class: 'antialiased',
       },
       title: 'VueManiaText',
       meta: [
@@ -14,5 +16,8 @@ export default defineNuxtConfig({
   },
   modules: [
     '@nuxtjs/tailwindcss'
-  ]
+  ],
+  future: {
+    compatibilityVersion: 4,
+  },
 })

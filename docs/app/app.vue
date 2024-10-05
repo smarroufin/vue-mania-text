@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ManiaText } from '../dist'
+import { ManiaText } from '../../dist'
 
 const value = ref('$00fVue$g$oMania$z$c00$iText')
 
