@@ -27,8 +27,8 @@ const preconfigs = [
         <button
           v-for="preconfig of preconfigs"
           :key="preconfig.name"
-          @click="value = preconfig.value"
           class="button-default"
+          @click="value = preconfig.value"
         >
           {{ preconfig.name }}
         </button>

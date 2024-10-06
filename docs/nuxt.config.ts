@@ -15,7 +15,8 @@ export default defineNuxtConfig({
     }
   },
   modules: [
-    '@nuxtjs/tailwindcss'
+    '@nuxt/eslint',
+    '@nuxtjs/tailwindcss',
   ],
   future: {
     compatibilityVersion: 4,
