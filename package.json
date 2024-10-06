@@ -26,15 +26,15 @@
     "docs:generate": "(cd docs && pnpm run generate)",
     "docs:preview": "(cd docs && pnpm run preview)"
   },
-  "devDependencies": {
-    "@types/node": "^18.11.18",
-    "@vitejs/plugin-vue": "^4.0.0",
-    "typescript": "^4.9.4",
-    "vite": "^4.0.4",
-    "vue-tsc": "^1.0.24"
-  },
   "dependencies": {
+    "vue": "^3.5.11"
+  },
+  "devDependencies": {
+    "@types/node": "^20.16.10",
+    "@vitejs/plugin-vue": "^4.0.0",
     "eslint": "^9.12.0",
-    "vue": "^3.2.45"
+    "typescript": "^5.6.2",
+    "vite": "^4.0.4",
+    "vue-tsc": "^2.1.6"
   }
 }
