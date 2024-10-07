@@ -1,7 +1,2 @@
-import ManiaText from './components/ManiaText.vue'
-import useManiaText from './composables/useManiaText'
-
-export {
-  ManiaText,
-  useManiaText
-}
+export { default as ManiaText } from './components/ManiaText.vue'
+export { default as useManiaText } from './composables/useManiaText'
