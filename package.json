@@ -32,6 +32,7 @@
     "vue": "^3.5.11"
   },
   "devDependencies": {
+    "@release-it/conventional-changelog": "^8.0.2",
     "@types/node": "^20.16.10",
     "@vitejs/plugin-vue": "^5.1.4",
     "eslint": "^9.12.0",
