@@ -11,7 +11,10 @@ const props = defineProps({
   }
 })
 
-const html = computed(() => format(props.value ?? ''))
+const html = computed(() => {
+  const { html } = format(props.value ?? '')
+  return html
+})
 </script>
 
 <template>

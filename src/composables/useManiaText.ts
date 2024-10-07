@@ -91,6 +91,7 @@ function createSpan (content: string, style: Style) {
 export default function () {
   function format (text: string) {
     let html: string = ''
+    let unformattedText: string = ''
     let content: string = ''
     let style: Style = {}
     for (let i = 0; i < text.length;) {
@@ -111,20 +112,25 @@ export default function () {
               style = command.style(style, substring)
             }
             if (command.content) {
-              content += command.content()
+              const commandContent = command.content()
+              content += commandContent
+              unformattedText += commandContent
             }
             i += command.length
+            break
           }
         }
         // no matching `$`, add raw text
         if (!handled) {
           content += substring
+          unformattedText += substring
           i += substring.length
         }
       }
       // text handling
       else {
         content += text[i]
+        unformattedText += text[i]
         i++
       }
     }
@@ -133,7 +139,7 @@ export default function () {
       html += createSpan(content, style)
       content = ''
     }
-    return html
+    return { html, unformattedText }
   }
 
   return {
