@@ -8,6 +8,10 @@ const props = defineProps({
   value: {
     type: String,
     default: ''
+  },
+  as: {
+    type: String,
+    default: 'span'
   }
 })
 
@@ -19,5 +23,5 @@ const html = computed(() => {
 
 <template>
   <!-- eslint-disable-next-line vue/no-v-html -->
-  <span v-html="html" />
+  <component :is="as" v-html="html" />
 </template>
