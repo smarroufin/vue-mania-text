@@ -21,4 +21,9 @@ export default defineNuxtConfig({
   future: {
     compatibilityVersion: 4,
   },
+  eslint: {
+    config: {
+      stylistic: true,
+    },
+  },
 })
