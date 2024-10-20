@@ -3,7 +3,7 @@ import type { Config } from 'release-it'
 export default {
   git: {
     commitMessage: 'chore(release): v${version}',
-    requireBranch: "main",
+    requireBranch: 'main',
     tagName: 'v${version}',
   },
   github: {

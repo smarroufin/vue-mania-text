@@ -9,9 +9,9 @@ export default <Partial<Config>> {
           lighter: '#A7F3D0',
           light: '#6EE7B7',
           DEFAULT: '#34D399',
-          dark: '#10B981'
-        }
-      }
-    }
-  }
+          dark: '#10B981',
+        },
+      },
+    },
+  },
 }

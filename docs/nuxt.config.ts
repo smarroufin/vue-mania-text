@@ -10,9 +10,9 @@ export default defineNuxtConfig({
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { hid: 'description', name: 'description', content: 'Vue 3 library to display maniaplanet formatted text' }
-      ]
-    }
+        { hid: 'description', name: 'description', content: 'Vue 3 library to display maniaplanet formatted text' },
+      ],
+    },
   },
   modules: [
     '@nuxt/eslint',
@@ -21,6 +21,7 @@ export default defineNuxtConfig({
   future: {
     compatibilityVersion: 4,
   },
+  compatibilityDate: '2024-10-20',
   devtools: {
     enabled: true,
   },

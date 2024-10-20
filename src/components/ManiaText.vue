@@ -7,12 +7,12 @@ const { format } = useManiaText()
 const props = defineProps({
   value: {
     type: String,
-    default: ''
+    default: '',
   },
   as: {
     type: String,
-    default: 'span'
-  }
+    default: 'span',
+  },
 })
 
 const html = computed(() => {
@@ -21,7 +21,11 @@ const html = computed(() => {
 })
 </script>
 
+<!-- eslint-disable vue/no-v-html -->
+<!-- eslint-disable vue/no-v-text-v-html-on-component -->
 <template>
-  <!-- eslint-disable-next-line vue/no-v-html -->
-  <component :is="as" v-html="html" />
+  <component
+    :is="as"
+    v-html="html"
+  />
 </template>

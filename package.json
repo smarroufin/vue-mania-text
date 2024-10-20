@@ -19,13 +19,15 @@
   },
   "scripts": {
     "build": "vite build && vue-tsc --emitDeclarationOnly",
+    "docs:dev": "nuxt dev docs",
+    "docs:build": "nuxt build docs",
+    "docs:generate": "nuxt generate docs",
+    "docs:preview": "nuxt preview docs",
+    "docs:start": "node docs/.output/server/index.mjs",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "docs:dev": "(cd docs && pnpm run dev)",
-    "docs:build": "(cd docs && pnpm run build)",
-    "docs:generate": "(cd docs && pnpm run generate)",
-    "docs:preview": "(cd docs && pnpm run preview)",
-    "docs:typecheck": "(cd docs && pnpm run typecheck)",
+    "typecheck": "vue-tsc --noEmit && nuxt typecheck docs",
+    "postinstall": "nuxt prepare docs",
     "release": "release-it"
   },
   "dependencies": {
@@ -36,6 +38,7 @@
     "@types/node": "^20.16.10",
     "@vitejs/plugin-vue": "^5.1.4",
     "eslint": "^9.12.0",
+    "nuxt": "3.13.2",
     "release-it": "^17.7.0",
     "typescript": "^5.6.2",
     "vite": "^5.4.8",

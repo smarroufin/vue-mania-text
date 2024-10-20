@@ -12,18 +12,29 @@ const preconfigs = [
   { name: '$ Character', value: '$$Jean-Pierre$$' },
   { name: 'Spacing', value: 'Normal$wWide$nNarrow' },
   { name: 'Reset all', value: '$oBold$iItalic$zDefault' },
-  { name: 'Reset color', value: '$f00Red$gDefault' }
+  { name: 'Reset color', value: '$f00Red$gDefault' },
 ]
 </script>
 
 <template>
   <div class="bg-primary text-black min-h-screen relative">
-    <header class="bg-black text-white p-4 text-3xl sticky top-0">VueManiaText</header>
+    <header class="bg-black text-white p-4 text-3xl sticky top-0">
+      VueManiaText
+    </header>
 
     <div class="w-full max-w-screen-sm px-4 py-16 mx-auto flex flex-col">
-      <ManiaText :value="value" class="control-default text-center p-4 text-3xl w-full min-h-18" />
-      <AppTextInput v-model="value" class="my-6" />
-      <div v-if="preconfigs.length" class="flex flex-wrap justify-center gap-2">
+      <ManiaText
+        :value="value"
+        class="control-default text-center p-4 text-3xl w-full min-h-18"
+      />
+      <AppTextInput
+        v-model="value"
+        class="my-6"
+      />
+      <div
+        v-if="preconfigs.length"
+        class="flex flex-wrap justify-center gap-2"
+      >
         <button
           v-for="preconfig of preconfigs"
           :key="preconfig.name"
@@ -36,7 +47,11 @@ const preconfigs = [
 
       <span class="mt-16 text-lg text-center">
         For development purpose, please visit
-        <NuxtLink href="https://www.npmjs.com/package/vue-mania-text" target="_blank" class="underline">VueManiaText</NuxtLink>
+        <NuxtLink
+          href="https://www.npmjs.com/package/vue-mania-text"
+          target="_blank"
+          class="underline"
+        >VueManiaText</NuxtLink>
         on npmjs.org.
       </span>
     </div>

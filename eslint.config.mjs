@@ -8,5 +8,7 @@ export default withNuxt({
       singleline: 'beside',
       multiline: 'below',
     }],
+    // Nuxt
+    'nuxt/nuxt-config-keys-order': 'off',
   },
 })
