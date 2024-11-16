@@ -27,10 +27,12 @@ const preconfigs = [
         :value="value"
         class="control-default text-center p-4 text-3xl w-full min-h-18"
       />
-      <AppTextInput
+      <input
         v-model="value"
-        class="my-6"
-      />
+        type="text"
+        class="control-default text-center p-4 text-3xl w-full my-6"
+        aria-label="mania text input"
+      >
       <div
         v-if="preconfigs.length"
         class="flex flex-wrap justify-center gap-2"
@@ -38,7 +40,7 @@ const preconfigs = [
         <button
           v-for="preconfig of preconfigs"
           :key="preconfig.name"
-          class="button-default"
+          class="control-default px-2 py-1 text-xl"
           @click="value = preconfig.value"
         >
           {{ preconfig.name }}
@@ -62,8 +64,5 @@ const preconfigs = [
 .control-default {
   @apply border-2 border-black rounded-tl-xl rounded-br-xl bg-primary text-black;
   transform: skew(-8deg);
-}
-.button-default {
-  @apply control-default px-2 py-1 text-xl;
 }
 </style>

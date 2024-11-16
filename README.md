@@ -26,4 +26,4 @@ const text = '$00fVue$g$oMania$z$f00$iText'
 
 ## Demo
 
-Try it on [VueManiaText](https://vue-mania-text.vercel.app/)
+Try it on [VueManiaText](https://vue-mania-text.smarroufin.dev/)
